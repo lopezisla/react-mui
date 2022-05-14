@@ -1,11 +1,5 @@
-import { useState } from "react";
-
 function App() {
-  return (
-    <div className="App">
-      <h1>Hola Mundo 2</h1>
-    </div>
-  );
+  return <h1>Hola Mundo 3</h1>;
 }
 
 export default App;
