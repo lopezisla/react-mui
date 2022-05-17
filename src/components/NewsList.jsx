@@ -1,10 +1,10 @@
 import { Grid, Typography } from "@mui/material";
-import useNoticias from "../hooks/useNoticias";
-import Noticia from "./Noticia";
+import useNews from "../hooks/useNews";
+import News from "./News";
 
-const ListadoNoticias = () => {
-  const { noticias } = useNoticias();
-  console.log(noticias);
+const NewsList = () => {
+  const { news } = useNews();
+  console.log(news);
   return (
     <>
       <Typography
@@ -19,10 +19,10 @@ const ListadoNoticias = () => {
       container
       spacing={2}
       >
-        {noticias.map((noticia) => (
-          <Noticia 
-          key={noticia.url}
-          noticia={noticia} 
+        {news.map((newsItem) => (
+          <News 
+          key={newsItem.url}
+          newsItem={newsItem} 
 
           />
         ))}
@@ -31,4 +31,4 @@ const ListadoNoticias = () => {
   );
 };
 
-export default ListadoNoticias;
+export default NewsList;

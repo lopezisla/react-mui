@@ -6,7 +6,7 @@ import {
   Button,
   Box
 } from "@mui/material";
-import useNoticias from "../hooks/useNoticias";
+import useNews from "../hooks/useNews";
 
 const CATEGORIAS = [
   { value: "general", label: "General" },
@@ -18,23 +18,23 @@ const CATEGORIAS = [
   { value: "technology", label: "Tecnología" },
 ];
 
-const Formulario = () => {
-  const { categoria, handleChangeCategoria } = useNoticias();
+const Form = () => {
+  const { category, handleChangeCategory } = useNews();
   return (
     <form>
       <FormControl fullWidth>
         <InputLabel>Categoría</InputLabel>
         <Select 
         label="Categoría"
-        onChange={handleChangeCategoria}
-        value={categoria}
+        onChange={handleChangeCategory}
+        value={category}
         >
-          {CATEGORIAS.map((categoria) => (
+          {CATEGORIAS.map((category) => (
             <MenuItem 
-            key={categoria.value} 
-            value={categoria.value}
+            key={category.value} 
+            value={category.value}
             >
-              {categoria.label}
+              {category.label}
             </MenuItem>
           ))}
         </Select>
@@ -48,4 +48,4 @@ const Formulario = () => {
   );
 };
 
-export default Formulario;
+export default Form;
