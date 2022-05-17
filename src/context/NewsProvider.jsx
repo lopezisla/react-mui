@@ -8,12 +8,12 @@ const NewsProvider = ({ children }) => {
   const [news, setNews] = useState([])
 
   useEffect(() => {
-    const consultarAPI = async () => {
+    const queryAPI = async () => {
         const url=`https://newsapi.org/v2/top-headlines?country=ar&category=${category}&pageSize=100&apiKey=${import.meta.env.VITE_API_KEY}`
         const {data}=await axios (url)
         setNews(data.articles)
     };
-    consultarAPI();
+    queryAPI();
     
   }, [category]);
 

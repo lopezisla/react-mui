@@ -4,7 +4,7 @@ import News from "./News";
 
 const NewsList = () => {
   const { news } = useNews();
-  console.log(news);
+  
   return (
     <>
       <Typography
